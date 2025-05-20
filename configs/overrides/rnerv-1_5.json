@@ -1,0 +1,7 @@
+{
+    "fc_dim": 12,
+    "lower_width": 20,
+    "stem_type": "ffnerv",
+    "t_dim": [256, 512],
+    "wbit": 32
+}
