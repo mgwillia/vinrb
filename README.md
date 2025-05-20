@@ -38,3 +38,7 @@ python scripts/flexible_benchmark.py --data-shape 1080_1920 --num-frames 600 --d
 ```
 
 Compressed INRs are saved to `results`, model weights are saved to `checkpoints`, csvs with training progress (quality, wall time) are saved in `output`, and PSNR/bpp are printed to standard out once training completes.
+
+Beware! Results for hybrid INRs (HNeRV, DiffNeRV, DivNeRV) are currently unreliable due to set_zero operating on parts of the model that are not saved (since they are not part of the bitstream).
+If you run the code as-is, hybrid INRs will produce noise output during compression evals.
+This can be temporarily bypassed by commenting set_zero(), but this should be treated with caution, and will be refactored in the future.
