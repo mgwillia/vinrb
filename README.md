@@ -36,3 +36,5 @@ To run our RNeRV configuration, in "short" mode (2 minutes on our RTXA5000), run
 ```
 python scripts/flexible_benchmark.py --data-shape 1080_1920 --num-frames 600 --data-path /path/to/UVG/honeybee_1080 --save-path results/honeybee_1080 --model-type enerv --checkpoint-suffix rnerv-short-1_5 --config-override-path configs/overrides/rnerv-1_5.json --positional-encoding ffnerv --train-epochs 11 --warmup-epochs 0 
 ```
+
+Compressed INRs are saved to `results`, model weights are saved to `checkpoints`, csvs with training progress (quality, wall time) are saved in `output`, and PSNR/bpp are printed to standard out once training completes.
